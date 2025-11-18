@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #f2f2f2;
+}
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.gallery{
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/*     width: 100%; */
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content{
+
+    margin: 15px;
+
+    max-width: 400px;
+    min-width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s ;
+    background: #f2f2f2;
+}
+
+img{
+    max-width: 240px;
+    height: auto;
+    text-align: center;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+p{
+    text-align: center;
+    color: #b2bec3;
+    padding-top:0 8px;
+}
+
+h6{
+    font-size: 1.2em;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    padding-top: 5px;
+}
+.fa{
+    font-size: 26px;
+    transition: .4s;
+
+}
+.checked {
+    color:#FF9F43
+}
+.fa:hover{
+    transform:scale(1.3);
+    transition: .6s;
+
+}
+button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.product-desc{
+    /* 1. កំណត់កម្ពស់បន្ទាត់ (Line Height) ជាតម្លៃជាក់លាក់ */
+    line-height: 1.4em; 
+    
+    /* 2. កំណត់កម្ពស់អប្បបរមា (Min-Height) គឺ 1.4em * 3 ជួរ = 4.2em */
+    min-height: 2.8em; 
+    
+    /* 3. លាក់អត្ថបទដែលលើស (ប្រសិនបើមាន) */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 5px;
+}
+
+.buy-1{
+    background: #2183a2;
+}
+.buy-2{
+    background: #3b3e6e;
+}
+.buy-3{
+    background: #0b0b0b;
+}
+.buy-4{
+    background: #FF9F43;
+}
+ /* @media(max-width:1000px){
+    .content{
+        width: 45px;
+    }
+} */
+ @media(max-width:1000x){
+.gallery{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}}
+@media(max-width:750x){
+.gallery{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}}
