@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+
+/* Background Style */
+.context {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+
+}
+td h5{
+    font-family: 'Exo', sans-serif;
+
+    font-weight: lighter;
+ 
+}
+
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:auto;
+min-height: 100vh;}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+/* Table Style */
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  width: 70%;}
+   table {
+  font-family: Arial, Helvetica, sans-serif;
+
+  width: 100%;
+ z-index: 100;
+}
+Table{
+      border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+
+td, th {
+border: 1px solid #850c7d;
+  padding: 5px;
+}
+a:hover{
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    
+}
+th{
+     font-family: 'Exo', sans-serif;
+    color: #4e54c8;
+}
+tr{background-color: #FDCFFA;
+color: #850c7d;}
+tr:hover{
+    background-color: #e5a0e0;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #D78FEE;
+  color: #8f13b8;
+}
+.num{
+
+    text-align: center;
+  
+}
+@media screen and (min-width: 601px) {
+
+
+h1{
+        font-size: 4rem;
+    }
+a{
+    font-size: 1.3rem;
+}
+h5{font-size: 1.3rem;}
+.num{font-size: 1.3rem;}
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
+    }
+a{
+    font-size: 1rem;
+}
+h5{font-size: 1rem;}
+.num{font-size: 1rem;}
+.container {  width: 95%;}
+}
