@@ -190,8 +190,8 @@ th{
      font-family: 'Exo', sans-serif;
     color: #4e54c8;
 }
-tr{background-color: #FDCFFA;
-color: #850c7d;}
+tr{background-color: rgba(255, 163, 249, 0.5);
+color: white;}
 tr:hover{
     background-color: #e5a0e0;
 }
