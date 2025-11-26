@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Khmer -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <style>
+    .font-khmer {
+      font-family: "Kantumruy Pro", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .thumb-img {
+      width: auto;
+
+      margin-bottom: 10px;
+    }
+
+    .main-img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    .sticky-col {
+      position: sticky;
+      top: 20px;
+    }
+.relate-img{
+
+  max-height: 150px;
+  aspect-ratio: 1/1;
+  object-fit:cover;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NavBar -->
+  <nav class="navbar bg-info-subtle align-content-center">
+    <div class="container-fluid">
+      <a class="navbar-brand font-khmer" href="#">
+        <i class="bi bi-chevron-compact-left d-lg-none" onclick="history.back()"></i>
+
+        ព័ត៌មានផលិតផល
+      </a>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row ">
+      <!-- Thumnail -->
+      <div class="col-lg-1 d-none d-lg-block ">
+        <div class="sticky-col">
+          <img src="https://m.media-amazon.com/images/I/712-khX9foL._AC_UF894,1000_QL80_.jpg" alt=""
+            class="thumb-img img-thumbnail img-fluid"  onclick="changeMainImg(this.src)">
+          <img
+            src="https://anbernic.com/cdn/shop/files/RG34XXSP_6a86c7bf-c59b-48a8-bc60-dfaea89a471f.jpg?v=1759138613&width=800"
+            alt="" class="thumb-img img-thumbnail img-fluid" onclick="changeMainImg(this.src)">
+          <img
+            src="https://anbernic.com/cdn/shop/files/RG34XXSP_b5fe51a1-725d-4700-834d-2db0a80df991.jpg?v=1759138613&width=800"
+            alt="" class="thumb-img img-thumbnail img-fluid "  onclick="changeMainImg(this.src)">
+          <img
+            src="https://anbernic.com/cdn/shop/files/RG34XXSP_a21d43c4-492a-441a-be6d-c16be138451c.jpg?v=1759138613&width=800"
+            alt="" class="thumb-img img-thumbnail img-fluid"  onclick="changeMainImg(this.src)">
+        </div>
+      </div>
+
+      <!-- Main Product -->
+      <div class="col-lg-6  img-fluid d-none d-lg-block ">
+        <div class="sticky-col">
+          <img src="https://m.media-amazon.com/images/I/712-khX9foL._AC_UF894,1000_QL80_.jpg" id="mainIMG" alt="" class="main-img">
+        </div>
+
+      </div>
+      <!--Photo Slide -->
+      <div id="carouselExampleRide" class="carousel slide d-lg-none" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://m.media-amazon.com/images/I/712-khX9foL._AC_UF894,1000_QL80_.jpg" class="d-block w-100"
+              alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://anbernic.com/cdn/shop/files/RG34XXSP_6a86c7bf-c59b-48a8-bc60-dfaea89a471f.jpg?v=1759138613&width=800"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://anbernic.com/cdn/shop/files/RG34XXSP_b5fe51a1-725d-4700-834d-2db0a80df991.jpg?v=1759138613&width=800"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Product info -->
+      <div class="col-lg-5">
+
+        <h2>ANBERNIC RG 34XXSP</h2>
+        <h3>$99.99</h3>
+        <p>
+          Anbernic RG34XXSP Retro Gaming Console – Flip Design, 3.4'' IPS Screen 720×480, 64G TF Card with 5000+ Games,
+          Portable Handheld, 3300mAh Battery, WiFi HDMI Bluetooth (Gray 64G)
+        </p>
+        <button type="button" class="btn btn-primary font-khmer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          បញ្ជារទិញ
+        </button>
+      </div>
+      <!-- End Product info -->
+    </div>
+
+  </div>
+  <!-- Related Product -->
+  <div class="container pb-5">
+    <h3>
+      Related Product
+    </h3>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://www.goretroid.com/cdn/shop/files/996c0314d3c9f4f6a92e228ed4c8e264_50a87e80-e84a-4f0c-b86c-ce09ca24047e_1024x1024@2x.jpg?v=1762132633"
+                  alt="Card image cap relate-img">
+                <div class="card-body">
+                  <p class="card-text">Product 1</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://www.goretroid.com/cdn/shop/files/548f6dfeb36e615cc62903b4eed35ece_bb916ff0-258e-467d-a12d-f79eb824f354_1024x1024@2x.jpg?v=1762132633"
+                  alt="Card image cap ">
+                <div class="card-body">
+                  <p class="card-text">Product 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpHiuO__vuBZcC28tgXTAIV21hKTcK_NlG0UDiFz9TJh_6u5iUNxtLEiF2Vlwtw5NX9zQ&usqp=CAU" 
+                  alt="Card image cap ">
+                <div class="card-body">
+                  <p class="card-text">Product 3</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://cdn.myshoptet.com/usr/www.konzoliste.cz/user/shop/big/89118-1_retro-handheld-konzole-anbernic-rg40xx-h-wifi-cerna.png?66c5a50f"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Product 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+ <!-- Slide 2 -->
+      <div class="carousel-inner">
+        <div class="carousel-item ">
+          <div class="row">
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://m.media-amazon.com/images/I/61keu8g3zNL._AC_UF1000,1000_QL80_.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Product 5</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://ae01.alicdn.com/kf/S0fcc8086b31241f389bf0037ad6cf1dfU.jpg_960x960.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Product 6</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfE-VqEszirzxXHAfZ-mz3nttPTEY_NWNgGg&s"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Product 7</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <img class="card-img-top relate-img"
+                  src="https://anbernic.com/cdn/shop/files/RG_477M_fa49e5b9-aa87-4acb-908e-180f71712b04.jpg?v=1759138527&width=800"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Product 8</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+    <!-- Related Product -->
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog col-10">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 font-khmer" id="exampleModalLabel">សូមបំពេញព័ត៌មានខាងក្រោម :</h1>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <form>
+              <div class="row ">
+                <div class="col-lg col-12 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="គោត្តនាម" aria-label="First name">
+                </div>
+                <div class="col-lg col-12 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="នាម" aria-label="Last name">
+                </div>
+              </div>
+              <label for="" class="fs-6 font-khmer">អាយដ្ឋាន</label>
+              <div class="row">
+
+                <div class="col-lg-3 col-6 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="ភូមិ" aria-label="Village name">
+                </div>
+                <div class="col-lg-3 col-6 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="ឃុំ/សង្កាត់"
+                    aria-label="commune name">
+                </div>
+
+                <div class="col-lg-3 col-6 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="ក្រុង/ស្រុក"
+                    aria-label="commune name">
+                </div>
+
+                <div class="col-lg-3 col-6 p-1 ">
+                  <input type="text" class="form-control font-khmer" placeholder="រាជធានី/ខេត្ត"
+                    aria-label="commune name">
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary font-khmer" data-bs-dismiss="modal">ចាញចេញ</button>
+            <button type="button" class="btn btn-primary font-khmer">រក្សាទុក</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+      function changeMainImg(src){
+        document.getElementById("mainIMG").src =src
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
